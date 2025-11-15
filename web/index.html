@@ -13,40 +13,64 @@
         <a href="https://github.com/kbweeb/Encrypted-Bank-System" target="_blank" rel="noopener">View Code →</a>
         <a href="https://kbweeb.github.io/" target="_blank" rel="noopener">Back to Portfolio →</a>
       </div>
-      <div class="grid">
-        <section>
-          <h2>Create Account</h2>
-          <label>ID <input id="newId" /></label>
-          <label>Name <input id="newName" /></label>
-          <label>PIN <input id="newPin" type="password" /></label>
-          <button id="createBtn">Create</button>
-        </section>
-        <section>
-          <h2>Deposit</h2>
-          <label>ID <input id="depId" /></label>
-          <label>Amount <input id="depAmt" type="number" /></label>
-          <button id="depBtn">Deposit</button>
-        </section>
-        <section>
-          <h2>Withdraw</h2>
-          <label>ID <input id="wdId" /></label>
-          <label>Amount <input id="wdAmt" type="number" /></label>
-          <button id="wdBtn">Withdraw</button>
-        </section>
-        <section>
-          <h2>Balance</h2>
-          <label>ID <input id="balId" /></label>
-          <button id="balBtn">Check</button>
-          <div id="balOut" class="out"></div>
-        </section>
-        <section>
-          <h2>All Accounts (Admin)</h2>
-          <label>Admin PIN <input id="adminPin" type="password" /></label>
-          <button id="listBtn">List</button>
-          <div id="listOut" class="out"></div>
-        </section>
-      </div>
-      <p class="note">Client-side prototype mirroring the C++ features. Uses localStorage; no real encryption here.</p>
+
+      <nav class="navbar">
+        <button data-tab="auth" class="active">Login / Create</button>
+        <button data-tab="dashboard" disabled>Dashboard</button>
+        <button data-tab="admin">Admin</button>
+      </nav>
+
+      <section id="auth" class="tab active">
+        <div class="grid">
+          <section>
+            <h2>Create Account</h2>
+            <label>ID <input id="newId" /></label>
+            <label>Name <input id="newName" /></label>
+            <label>PIN <input id="newPin" type="password" /></label>
+            <button id="createBtn">Create</button>
+          </section>
+          <section>
+            <h2>Login</h2>
+            <label>ID <input id="loginId" /></label>
+            <label>PIN <input id="loginPin" type="password" /></label>
+            <button id="loginBtn">Login</button>
+          </section>
+        </div>
+      </section>
+
+      <section id="dashboard" class="tab">
+        <p class="note">Welcome, <span id="currentUserName">-</span>. Use the actions below.</p>
+        <div class="grid">
+          <section>
+            <h2>Deposit</h2>
+            <label>Amount <input id="depAmt" type="number" /></label>
+            <button id="depBtn">Deposit</button>
+          </section>
+          <section>
+            <h2>Withdraw</h2>
+            <label>Amount <input id="wdAmt" type="number" /></label>
+            <button id="wdBtn">Withdraw</button>
+          </section>
+          <section>
+            <h2>Balance</h2>
+            <button id="balBtn">Check</button>
+            <div id="balOut" class="out"></div>
+          </section>
+          <section>
+            <h2>Session</h2>
+            <button id="logoutBtn">Logout</button>
+          </section>
+        </div>
+      </section>
+
+      <section id="admin" class="tab">
+        <h2>All Accounts (Admin)</h2>
+        <label>Admin PIN <input id="adminPin" type="password" /></label>
+        <button id="listBtn">List</button>
+        <div id="listOut" class="out"></div>
+      </section>
+
+      <p class="note">You must login to access the dashboard. Data is stored in localStorage for demo purposes only.</p>
     </main>
     <script src="app.js"></script>
   </body>
