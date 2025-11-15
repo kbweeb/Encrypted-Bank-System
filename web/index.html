@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encrypted Bank System — Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Encrypted Bank System — Demo</h1>
+      <div class="grid">
+        <section>
+          <h2>Create Account</h2>
+          <label>ID <input id="newId" /></label>
+          <label>Name <input id="newName" /></label>
+          <label>PIN <input id="newPin" type="password" /></label>
+          <button id="createBtn">Create</button>
+        </section>
+        <section>
+          <h2>Deposit</h2>
+          <label>ID <input id="depId" /></label>
+          <label>Amount <input id="depAmt" type="number" /></label>
+          <button id="depBtn">Deposit</button>
+        </section>
+        <section>
+          <h2>Withdraw</h2>
+          <label>ID <input id="wdId" /></label>
+          <label>Amount <input id="wdAmt" type="number" /></label>
+          <button id="wdBtn">Withdraw</button>
+        </section>
+        <section>
+          <h2>Balance</h2>
+          <label>ID <input id="balId" /></label>
+          <button id="balBtn">Check</button>
+          <div id="balOut" class="out"></div>
+        </section>
+        <section>
+          <h2>All Accounts (Admin)</h2>
+          <label>Admin PIN <input id="adminPin" type="password" /></label>
+          <button id="listBtn">List</button>
+          <div id="listOut" class="out"></div>
+        </section>
+      </div>
+      <p class="note">Client-side prototype mirroring the C++ features. Uses localStorage; no real encryption here.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+  </html>

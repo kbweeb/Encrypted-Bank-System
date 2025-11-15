@@ -32,3 +32,17 @@ A simple yet secure bank management system built in C++ that allows users to cre
 
 ##  File Structure
 
+```
+Bank System.cpp      # C++ console application
+CMakeLists.txt       # Fixed CMake configuration
+web/                 # Static browser demo (client-only prototype)
+```
+
+## 🌐 Web Frontend (Browser Demo)
+
+A simple client-only demo UI is available under `web/` to showcase the core features (create, deposit, withdraw,
+balance, admin list). It uses localStorage for state; encryption is not implemented in the demo.
+
+- Open locally: `web/index.html`
+- Deploy: host `web/` as a static site (Vercel/Netlify/GitHub Pages)
+
