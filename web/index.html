@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Encrypted Bank System — Dashboard</title>
+    <title>Encrypted Bank System â€” Dashboard</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,6 +19,11 @@
     </aside>
 
     <!-- Header -->
+      <nav class="navbar" style="display:none">
+        <button data-tab="auth" class="active">Login / Create</button>
+        <button data-tab="dashboard" disabled>Dashboard</button>
+        <button data-tab="admin">Admin</button>
+      </nav>
     <header class="nxl-header">
       <h4 id="headerTitle">Encrypted Bank System</h4>
       <div class="user-pill">
@@ -64,10 +69,10 @@
             <label>Amount <input id="trAmt" type="number" /></label>
             <button id="trBtn">Transfer</button>
           </section>
+          
           <section>
-            <h2>Balance</h2>
-            <button id="balBtn">Check</button>
-            <div id="balOut" class="out"></div>
+            <h2>Session</h2>
+            <button id="logoutBtn">Logout</button>
           </section>
         </div>
 
@@ -94,6 +99,8 @@
       <p class="note">Static demo. Data lives in localStorage. Safe for Vercel static deploy.</p>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
   </body>
 </html>
+
+
